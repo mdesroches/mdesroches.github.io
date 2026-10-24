@@ -1,0 +1,123 @@
+:root {
+  --accent: rgb(170, 121, 66);
+  --ink: #000;
+  --muted: #646464;
+  --paper: #fff;
+  --link-seen: #0000c8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Nunito, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.site-shell {
+  position: relative;
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.site-header {
+  position: relative;
+  padding: .5rem 1rem;
+  min-height: 82px;
+}
+.brand {
+  display: inline-block;
+  color: #000 !important;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.inria-mark {
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+}
+.inria-mark img { width: 95px; height: auto; }
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .45rem;
+  margin-top: .35rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+.site-nav .active { border-bottom: 2px solid #000; }
+.icon-link { display: inline-flex; align-items: center; }
+.icon-link img { width: 21px; height: 21px; object-fit: contain; }
+.page-content { padding: 0 1rem 2rem; }
+a { color: #000; text-decoration: none; }
+a:visited { color: var(--link-seen); }
+a:hover, a:focus-visible { background: var(--accent); color: #fff; }
+p { text-align: justify; }
+h2 {
+  margin: 2rem 0 1rem;
+  padding-left: 10px;
+  color: var(--muted);
+  font-family: Nunito, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+ul { padding-left: 2rem; }
+li { margin-bottom: 1rem; }
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .15rem .5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.section-nav a:not(:last-child)::after {
+  content: " ·";
+  color: #000;
+  background: #fff;
+  margin-left: .5rem;
+}
+.intro { max-width: 1120px; }
+.profile-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.profile-photo {
+  width: 119px;
+  height: 146px;
+  object-fit: cover;
+  object-position: center;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: max-content minmax(0, max-content);
+  gap: .15rem .75rem;
+  margin: 0;
+}
+.contact-grid dt { font-weight: 700; }
+.contact-grid dd { margin: 0; color: var(--accent); }
+.email-image { width: 145px; height: 20px; object-fit: contain; }
+.anchor { scroll-margin-top: 1rem; }
+.page-content img[alt="DOI"], .page-content img[alt="HAL"] { width: 28px !important; height: 28px !important; vertical-align: middle; }
+.page-content img[alt="bioRxiv"] { width: 48px !important; height: auto !important; vertical-align: middle; }
+.page-content img[alt="PsyArxiv"] { width: 74px !important; height: auto !important; vertical-align: middle; }
+.back-to-top { color: var(--muted); font-weight: 700; }
+
+@media (max-width: 680px) {
+  .site-shell { width: 100%; margin: 0; padding: .75rem; }
+  .site-header { padding: .35rem 0; min-height: 0; }
+  .brand { font-size: 1.65rem; max-width: calc(100% - 95px); }
+  .inria-mark { top: .35rem; right: 0; }
+  .inria-mark img { width: 78px; }
+  .site-nav { justify-content: flex-start; flex-wrap: wrap; margin-top: 1.1rem; }
+  .page-content { padding: 0 0 2rem; }
+  .profile-card { flex-direction: column; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid dd { margin-bottom: .5rem; }
+  p { text-align: left; }
+}

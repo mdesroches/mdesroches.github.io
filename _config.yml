@@ -1,0 +1,7 @@
+title: Mathieu Desroches
+description: Research Director at Inria and scientific leader of MathNeuro
+url: ""
+baseurl: ""
+permalink: pretty
+exclude:
+  - README.md
