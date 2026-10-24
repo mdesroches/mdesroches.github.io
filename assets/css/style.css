@@ -23,6 +23,22 @@ body {
   line-height: 1.5;
 }
 
+/* Text links: bold normally, ochre rectangle on hover or keyboard focus */
+
+a {
+  color: var(--link-seen);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: #fff;
+  background-color: var(--accent);
+  text-decoration: none;
+  outline: none;
+}
+
 .site-shell {
   position: relative;
   width: 95%;
@@ -51,8 +67,10 @@ body {
 }
 
 .brand:hover,
-.brand:focus {
+.brand:focus,
+.brand:focus-visible {
   color: var(--ink);
+  background-color: transparent;
   text-decoration: none;
 }
 
@@ -65,7 +83,14 @@ body {
 .inria-mark {
   display: block;
   margin-bottom: 0.75rem;
+  background-color: transparent;
   text-decoration: none;
+}
+
+.inria-mark:hover,
+.inria-mark:focus,
+.inria-mark:focus-visible {
+  background-color: transparent;
 }
 
 .inria-mark img {
@@ -91,16 +116,23 @@ body {
 }
 
 .site-nav a:hover,
-.site-nav a:focus {
-  text-decoration: underline;
-  text-underline-offset: 0.25rem;
+.site-nav a:focus,
+.site-nav a:focus-visible {
+  color: #fff;
+  background-color: var(--accent);
+  text-decoration: none;
 }
 
 .site-nav a.active {
   color: var(--ink);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.35rem;
+  text-decoration: none;
+}
+
+.site-nav a.active:hover,
+.site-nav a.active:focus,
+.site-nav a.active:focus-visible {
+  color: #fff;
+  background-color: var(--accent);
 }
 
 .site-nav .icon-link,
@@ -110,6 +142,12 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+
+.site-nav .icon-link:hover,
+.site-nav .icon-link:focus,
+.site-nav .icon-link:focus-visible {
+  background-color: transparent;
 }
 
 .site-nav .icon-link img {
@@ -140,8 +178,8 @@ li {
 .section-nav a:not(:last-child)::after {
   content: " \00b7";
   margin-left: 0.5rem;
-  color: var(--ink);
-  background: var(--paper);
+  color: inherit;
+  background: transparent;
 }
 
 .intro {
