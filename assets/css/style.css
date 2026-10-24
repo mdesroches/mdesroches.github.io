@@ -42,12 +42,12 @@ body {
 
 .inria-mark {
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
 }
 
 .inria-mark img {
   display: block;
-  width: 200px;
+  width: 240px;
   height: auto;
 }
 
@@ -58,8 +58,23 @@ body {
   gap: 0.3rem;
   white-space: nowrap;
 }
+
+.site-nav .icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-nav .icon-link img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 ul { padding-left: 2rem; }
 li { margin-bottom: 1rem; }
+
 .section-nav {
   display: flex;
   flex-wrap: wrap;
