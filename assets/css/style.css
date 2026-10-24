@@ -96,8 +96,8 @@ li { margin-bottom: 1rem; }
   margin-top: 2.5rem;
 }
 .profile-photo {
-  width: 119px;
-  height: 146px;
+  width: 125px;
+  height: auto;
   object-fit: cover;
   object-position: center;
 }
